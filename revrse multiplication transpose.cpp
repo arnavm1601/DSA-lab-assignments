@@ -4,7 +4,7 @@ void print(int arr[],int n){
     for(int i=0;i<n;i++)
         cout<<arr[i]<<" ";
 }
-void primematrix(int mat[10][10],int a, int b){
+void printmatrix(int mat[10][10],int a, int b){
     for(int i=0;i<a;i++){
         for(int j=0;j<b;j++){
              cout<<mat[i][j]<<" ";}
@@ -59,9 +59,9 @@ int main() {
             for(int j=0;j<c2;j++)
                 cin>>m2[i][j];
         cout<<"First Matrix =>\n";
-        primematrix(m1,r1,c1);
+        printmatrix(m1,r1,c1);
         cout<<"Second Matrix =>\n";
-        primematrix(m2,r2,c2);
+        printmatrix(m2,r2,c2);
         for(int i=0;i<r1;i++)
             for(int j=0;j<c2;j++){
                 result[i][j]=0;
@@ -69,7 +69,7 @@ int main() {
                     result[i][j]+=m1[i][k]*m2[k][j];
             }
             cout<<"\nResult is =>\n";
-        primematrix(result,r1,c2); 
+        printmatrix(result,r1,c2); 
         cout<<"\n";
     break;
     case 3:
@@ -83,12 +83,12 @@ int main() {
         for(int j=0;j<c;j++)
             cin>>mat[i][j];
     cout<<"Original Matrix =>\n";
-    primematrix(mat,r,c);
+    printmatrix(mat,r,c);
     for(int i=0;i<r;i++)
         for(int j=0;j<c;j++)
             t[j][i]=mat[i][j];
     cout<<"Transpose =>\n";
-    primematrix(t,c,r);
+    printmatrix(t,c,r);
     break;
     case 4:
     return 0;
